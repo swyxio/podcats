@@ -1,0 +1,23 @@
+{
+  "name": "podcats",
+  "version": "0.1.4",
+  "main": "dist/index.js",
+  "umd:main": "dist/podcats.umd.production.js",
+  "module": "dist/podcats.es.production.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.13",
+    "@types/xml": "^1.0.2",
+    "tsdx": "^0.3.0",
+    "typescript": "^3.2.4",
+    "xml": "^1.0.1"
+  }
+}

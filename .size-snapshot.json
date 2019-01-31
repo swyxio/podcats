@@ -1,0 +1,36 @@
+{
+  "/Users/swyx/Work/podcats2/podcats/dist/podcats.cjs.development.js": {
+    "bundled": 13681,
+    "minified": 4918,
+    "gzipped": 2133
+  },
+  "/Users/swyx/Work/podcats2/podcats/dist/podcats.umd.development.js": {
+    "bundled": 14660,
+    "minified": 4751,
+    "gzipped": 2127
+  },
+  "/Users/swyx/Work/podcats2/podcats/dist/podcats.cjs.production.js": {
+    "bundled": 13681,
+    "minified": 4918,
+    "gzipped": 2133
+  },
+  "/Users/swyx/Work/podcats2/podcats/dist/podcats.umd.production.js": {
+    "bundled": 14660,
+    "minified": 4751,
+    "gzipped": 2127
+  },
+  "/Users/swyx/Work/podcats2/podcats/dist/podcats.es.production.js": {
+    "bundled": 13477,
+    "minified": 4752,
+    "gzipped": 2069,
+    "treeshaked": {
+      "rollup": {
+        "code": 192,
+        "import_statements": 12
+      },
+      "webpack": {
+        "code": 1356
+      }
+    }
+  }
+}
