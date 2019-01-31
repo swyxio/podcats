@@ -5090,10 +5090,10 @@ ts-jest@^23.10.5:
     semver "^5.5"
     yargs-parser "10.x"
 
-tsdx@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/tsdx/-/tsdx-0.3.0.tgz#1033e8a3559721619e39d0cf4fcea4366439c277"
-  integrity sha512-W6xWugOKm8UJoCrlnCmpiSnIeEtaj815/RsRPjSjniB8OqFz5ebwaTi1dvcPorso+F/KdMa7AxIuys7gVE9ZJg==
+tsdx@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/tsdx/-/tsdx-0.3.1.tgz#1ba41cf746a13b22e7675cbd8402f32f3fd04637"
+  integrity sha512-PhcTeGGDWrKnhhHuVV+p3HMfIvm87INj+Ozj/1JNesoDrDuBepwP7/DM2qtdFD7immeKRcIfEuFca3+Gx652Hg==
   dependencies:
     "@babel/core" "^7.2.2"
     ansi-escapes "^3.1.0"
