@@ -29,9 +29,12 @@ export const grabContents = (filepaths: string[], myURL: string) => {
       attributes: EpisodeFrontMatter;
       body: string;
     };
-    (attributes.slug = filepath.split('.')[0]), // todo: slugify
-      // handle local links
-      (body = md.render(body));
+    attributes.slug = filepath
+      .split('/')
+      .slice(-1)[0]
+      .split('.')[0]; // todo: slugify
+    // handle local links
+    body = md.render(body);
     body = body.replace(/src="\//g, `src="${myURL}/`);
     const mp3path = path.join(
       process.cwd(),
