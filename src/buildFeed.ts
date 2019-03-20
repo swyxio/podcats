@@ -65,10 +65,13 @@ export const buildFeed = async (
 
   await Promise.all(
     contents.map(async ({ frontmatter: fm, body, mp3path, filepath }) => {
+      let decoratedMp3URL = feedOptions.podtrac ? 
+        podtracify(safeJoin(myURL, fm.mp3URL)) : 
+        safeJoin(myURL, fm.mp3URL);
       feed.addItem({
         title: fm.title,
         id: safeJoin(myURL, filepath),
-        link: safeJoin(myURL, fm.mp3URL),
+        link: decoratedMp3URL,
         date: parse(fm.date),
         content: body,
         author: [author],
@@ -86,7 +89,7 @@ export const buildFeed = async (
           episode: fm.episode,
           season: fm.season,
           contentEncoded: body,
-          mp3URL: safeJoin(myURL, fm.mp3URL),
+          mp3URL: decoratedMp3URL,
           enclosureLength: fs.statSync(mp3path).size // size in bytes
         }
       });
@@ -99,6 +102,11 @@ export const buildFeed = async (
 
   return feed;
 };
+
+function podtracify(url: string) {
+  const tokens = /http(s)?:\/\/(.+)/.exec(url)
+  return tokens ? `http${tokens[1] && 's'}://dts.podtrac.com/redirect.mp3/${tokens[2]}` : url;
+}
 
 function safeJoin(a: string, b: string) {
   /** strip starting/leading slashes and only use our own */
