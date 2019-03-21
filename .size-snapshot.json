@@ -1,28 +1,28 @@
 {
   "/Users/swyx/Work/podcats2/podcats/dist/podcats.cjs.development.js": {
-    "bundled": 13735,
-    "minified": 4942,
-    "gzipped": 2140
+    "bundled": 14041,
+    "minified": 5109,
+    "gzipped": 2226
   },
   "/Users/swyx/Work/podcats2/podcats/dist/podcats.umd.development.js": {
-    "bundled": 14720,
-    "minified": 4775,
-    "gzipped": 2131
+    "bundled": 15040,
+    "minified": 4921,
+    "gzipped": 2211
   },
   "/Users/swyx/Work/podcats2/podcats/dist/podcats.cjs.production.js": {
-    "bundled": 13735,
-    "minified": 4942,
-    "gzipped": 2140
+    "bundled": 14041,
+    "minified": 5109,
+    "gzipped": 2226
   },
   "/Users/swyx/Work/podcats2/podcats/dist/podcats.umd.production.js": {
-    "bundled": 14720,
-    "minified": 4775,
-    "gzipped": 2131
+    "bundled": 15040,
+    "minified": 4921,
+    "gzipped": 2211
   },
   "/Users/swyx/Work/podcats2/podcats/dist/podcats.es.production.js": {
-    "bundled": 13531,
-    "minified": 4776,
-    "gzipped": 2077,
+    "bundled": 13837,
+    "minified": 4943,
+    "gzipped": 2162,
     "treeshaked": {
       "rollup": {
         "code": 192,
