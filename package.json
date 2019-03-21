@@ -1,6 +1,6 @@
 {
   "name": "podcats",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "main": "dist/index.js",
   "umd:main": "dist/podcats.umd.production.js",
   "module": "dist/podcats.es.production.js",
