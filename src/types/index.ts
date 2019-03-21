@@ -115,6 +115,7 @@ export interface FeedOptions {
   feed?: string;
   feedLinks?: any;
   hub?: string;
+  podtrac?: boolean;
 
   author: Author;
 
