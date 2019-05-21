@@ -65,8 +65,8 @@ export const buildFeed = async (
 
   await Promise.all(
     contents.map(async ({ frontmatter: fm, body, mp3path, filepath }) => {
-      let decoratedMp3URL = feedOptions.podtrac ? 
-        podtracify(safeJoin(myURL, fm.mp3URL)) : 
+      let decoratedMp3URL = feedOptions.decorateURL ? 
+        feedOptions.decorateURL(safeJoin(myURL, fm.mp3URL)) : 
         safeJoin(myURL, fm.mp3URL);
       feed.addItem({
         title: fm.title,
@@ -102,11 +102,6 @@ export const buildFeed = async (
 
   return feed;
 };
-
-function podtracify(url: string) {
-  const tokens = /http(s)?:\/\/(.+)/.exec(url)
-  return tokens ? `http${tokens[1] && 's'}://dts.podtrac.com/redirect.mp3/${tokens[2]}` : url;
-}
 
 function safeJoin(a: string, b: string) {
   /** strip starting/leading slashes and only use our own */

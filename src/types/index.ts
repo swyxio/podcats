@@ -115,7 +115,7 @@ export interface FeedOptions {
   feed?: string;
   feedLinks?: any;
   hub?: string;
-  podtrac?: boolean;
+  decorateURL?: (url: string) => string;
 
   author: Author;
 
