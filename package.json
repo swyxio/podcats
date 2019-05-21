@@ -12,12 +12,30 @@
     "start": "tsdx watch",
     "build": "tsdx build",
     "prepare": "tsdx build",
-    "test": "tsdx test"
+    "test": "tsdx test",
+    "version": "auto-changelog -p --template keepachangelog && git add CHANGELOG.md",
+    "prepublishOnly": "git push && git push --tags && gh-release"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "prettier": {
+    "printWidth": 100,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
   },
   "devDependencies": {
     "@types/jest": "^23.3.13",
     "@types/xml": "^1.0.2",
-    "tsdx": "^0.3.1",
+    "auto-changelog": "^1.13.0",
+    "gh-release": "^3.5.0",
+    "husky": "^2.3.0",
+    "prettier": "^1.17.1",
+    "pretty-quick": "^1.11.0",
+    "tsdx": "^0.5.11",
     "typescript": "^3.2.4",
     "xml": "^1.0.1"
   }
