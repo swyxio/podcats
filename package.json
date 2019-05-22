@@ -8,6 +8,10 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sw-yx/podcats"
+  },
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
