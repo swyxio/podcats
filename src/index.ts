@@ -1,3 +1,3 @@
-export * from './buildFeed';
-export * from './types';
-export * from './formatTime';
+export * from './buildFeed'
+export * from './types'
+export * from './formatTime'

@@ -7,34 +7,32 @@ import {
   Extension,
   // ITunesCategory,
   // ITunesOwner,
-  ITunesChannelFields
-} from './types';
+  ITunesChannelFields,
+} from './types'
 // import renderAtom from './atom1'
 // import renderJSON from './json'
-import renderRSS from './rss2';
+import renderRSS from './rss2'
 
 export class Feed {
-  options: FeedOptions;
-  IToptions: ITunesChannelFields;
-  items: Item[] = [];
-  categories: string[] = [];
-  contributors: Author[] = [];
-  extensions: Extension[] = [];
+  options: FeedOptions
+  IToptions: ITunesChannelFields
+  items: Item[] = []
+  categories: string[] = []
+  contributors: Author[] = []
+  extensions: Extension[] = []
 
   constructor(options: FeedOptions, IToptions: ITunesChannelFields) {
-    this.options = options;
-    this.IToptions = IToptions;
+    this.options = options
+    this.IToptions = IToptions
   }
 
-  public addItem = (item: Item) => this.items.push(item);
+  public addItem = (item: Item) => this.items.push(item)
 
-  public addCategory = (category: string) => this.categories.push(category);
+  public addCategory = (category: string) => this.categories.push(category)
 
-  public addContributor = (contributor: Author) =>
-    this.contributors.push(contributor);
+  public addContributor = (contributor: Author) => this.contributors.push(contributor)
 
-  public addExtension = (extension: Extension) =>
-    this.extensions.push(extension);
+  public addExtension = (extension: Extension) => this.extensions.push(extension)
 
   // /**
   //  * Returns a Atom 1.0 feed
@@ -44,7 +42,7 @@ export class Feed {
   /**
    * Returns a RSS 2.0 feed
    */
-  public rss2 = (): string => renderRSS(this);
+  public rss2 = (): string => renderRSS(this)
 
   // /**
   //  * Returns a JSON1 feed
