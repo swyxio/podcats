@@ -282,7 +282,8 @@ export default (ins: Feed) => {
   return DOCTYPE + xml([{ rss }], true)
 }
 
-/** If this function is called invariant, it won't be called, as some
+/**
+ * If this function is called invariant, it won't be called, as some
  * sort of Typescript version overrides it. Blew my mind debugging.
  * -@erikras, May 22, 2019
  */
